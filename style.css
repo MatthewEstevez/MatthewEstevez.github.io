@@ -1,26 +1,26 @@
-/* apply basic resets */
+/* base resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* page background and font */
+/* dark mode defaults */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
+  background-color: #121212;
+  color: #e0e0e0;
   line-height: 1.6;
   padding: 40px 20px;
 }
 
-/* container for page content */
+/* container for content */
 .container {
   max-width: 800px;
   margin: auto;
 }
 
-/* header styling */
+/* header styles */
 header {
   margin-bottom: 30px;
 }
@@ -31,7 +31,7 @@ header h1 {
 }
 
 header p a {
-  color: #0077cc;
+  color: #66b2ff;
   text-decoration: none;
 }
 
@@ -39,11 +39,11 @@ header p a:hover {
   text-decoration: underline;
 }
 
-/* project list styling */
+/* project list */
 h2 {
   margin-bottom: 15px;
   font-size: 1.5rem;
-  color: #333;
+  color: #cccccc;
 }
 
 .project-list {
@@ -56,11 +56,28 @@ h2 {
 }
 
 .project-list a {
-  color: #0066aa;
+  color: #66b2ff;
   text-decoration: none;
   font-weight: bold;
 }
 
 .project-list a:hover {
   text-decoration: underline;
+}
+
+/* light mode overrides */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f9f9f9;
+    color: #222;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  header p a,
+  .project-list a {
+    color: #0077cc;
+  }
 }
